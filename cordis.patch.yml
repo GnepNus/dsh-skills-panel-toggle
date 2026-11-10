@@ -1,0 +1,3 @@
+- insert:
+    - id: skills-panel
+      name: '@local/skills-panel'
