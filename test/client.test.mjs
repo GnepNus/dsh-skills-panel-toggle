@@ -17,7 +17,7 @@ globalThis.window = { __ModuleLoader__: { load(candidate) { entry = candidate } 
 
 await import('../client.js')
 assert.ok(entry !== undefined, 'client bundle registers a module')
-assert.equal(entry.id, '@local/skills-panel')
+assert.equal(entry.id, 'dsh-skills-panel-toggle')
 
 // Minimal hook runtime: one object carries all hook state for the active render.
 let runtime = null

@@ -1,9 +1,26 @@
 {
-  "name": "@local/skills-panel",
+  "name": "dsh-skills-panel-toggle",
   "version": "1.0.0",
-  "private": true,
-  "type": "module",
   "description": "Sidebar panel to browse every skill and disable or enable it.",
+  "type": "module",
+  "license": "MIT",
+  "author": "GnepNus",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GnepNus/dsh-skills-panel-toggle.git"
+  },
+  "homepage": "https://github.com/GnepNus/dsh-skills-panel-toggle#readme",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "skills"
+  ],
+  "engines": {
+    "dsh": ">=0.2.2-rc.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "exports": {
     ".": "./index.js",
     "./client": "./client.js",
@@ -19,6 +36,7 @@
     "README.md"
   ],
   "dsh": {
+    "manifestVersion": 1,
     "bundle": { "patch": "./cordis.patch.yml" },
     "client": {
       "platform": "web",

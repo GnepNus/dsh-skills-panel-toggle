@@ -3,6 +3,20 @@
 一个用于 Harness Web UI 的侧边栏面板，列出当前会话可见的所有技能，并允许
 用户逐个禁用或启用。
 
+## 安装
+
+需要 dsh `>= 0.2.2-rc.1`。插件以 bundle 形式分发，从 GitHub 安装：
+
+```bash
+dsh plugin --profile web add git+https://github.com/GnepNus/dsh-skills-panel-toggle.git
+```
+
+也可以在 Web UI 中打开 **Plugins → Add plugin**，填入上面的 Git 地址（同样
+支持 tarball 和本地路径），安装完成后点击 **Enable now**。插件管理器会把
+`dsh-skills-panel-toggle` 加入该 profile 的 bundle 列表并实时生效。
+
+安装后，Web UI 左侧边栏会出现技能图标；点击图标即可打开面板。
+
 ## 用法
 
 从左侧边栏的技能图标打开面板。每一行显示技能名称、其发现来源（`project · .dsh`、
@@ -56,3 +70,7 @@ Web 服务器。没有 profile 目录时面板仍会列出技能，但无法持�
 持久化、agent 创建/销毁、鉴权与错误路径。`node test/client.test.mjs` 检查侧边栏
 图标与面板注册以及语言字典。两者都需要由 profile 启动的 shell，以便
 `DSH_PROFILE_DIR` 能解析出部署包；它们不渲染任何内容。
+
+## 许可证
+
+[MIT](LICENSE)

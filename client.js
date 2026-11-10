@@ -7,7 +7,7 @@
  */
 
 window.__ModuleLoader__.load({
-  id: '@local/skills-panel',
+  id: 'dsh-skills-panel-toggle',
   factory(require) {
     const React = require('react')
     const h = React.createElement
